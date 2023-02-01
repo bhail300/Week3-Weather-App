@@ -11,7 +11,7 @@ export default function Home() {
   const [weather, setWeather] = useState();
   const [errorMessage, setErrorMessage] = useState("");
 
-  let apiKey = "250f2167573768cda8b0dfbf07252eaa";
+  let apiKey = process.env.NEXT_PUBLIC_apiKey
   let lang = "en";
   let units = "metric";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${apiKey}&lang=${lang}`;
